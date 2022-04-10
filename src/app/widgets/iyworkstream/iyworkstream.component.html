@@ -1,0 +1,12 @@
+<div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+        <button mat-button fxFlex="50" fxLayoutAlign="left" (click)=streamSelected()>{{ workstream }} </button>
+        <div class="spacer" fxFlex="50" fxLayoutAlign="end"> {{ wsPctComplete }}</div>
+    </div>
+    <mat-progress-bar 
+        [bufferValue]=wsTotal
+        value="{{ wsCompleted }}" 
+        color="{{ wsColor }}" 
+        mode="determinate">
+    </mat-progress-bar>
+</div>

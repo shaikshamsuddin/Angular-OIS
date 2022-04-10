@@ -1,0 +1,32 @@
+<div class="contrib-page">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+        <mat-card fxFlex>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                <mat-card-title fxFlex="50" fxLayoutAlign="left" class="dc">DATA CONTRIBUTIONS</mat-card-title>
+                <div class="spacer" fxFlex="50" fxLayoutAlign="end"> {{ PctComplete }}%</div>
+            </div>
+            <mat-card-content>
+                    <mat-progress-bar [value]="PctComplete" [bufferValue]="100" [color]="dcColor" [mode]="'determinate'"></mat-progress-bar>
+            </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex>
+            <mat-card-title class="basket-status">BASKET STATUS</mat-card-title>
+            <mat-card-content>
+                    <h3>{{ basketStatus }}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between top" fxLayoutGap="20px" class="contrib-section">
+        <mat-card fxFlex="50">
+            <mat-card-title>Data Contributions</mat-card-title>
+            <div *ngFor="let ws of workStreams">
+                <mat-card-content>
+                    <app-iyworkstream workstream="{{ws.StreamName}}" [wsCompleted]="ws.Completed" [wsTotal]="streamtotal" [wsPctComplete]="ws.PercentCompleted" [wsid]="ws.StreamId"></app-iyworkstream>
+                </mat-card-content>
+            </div>
+        </mat-card>
+        <mat-card fxFlex="50">
+            <mat-card-title> {{ selectedWorkStream }}</mat-card-title>
+        </mat-card>
+    </div>
+</div>

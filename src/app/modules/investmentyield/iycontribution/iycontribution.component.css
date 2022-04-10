@@ -1,0 +1,26 @@
+.contrib-page {
+    padding: 10px;
+}
+.contrib-section {
+    padding-top: 10px;
+}
+.contrib-progress {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 10px;
+}
+.dc {
+    color: rgb(38, 161, 161);
+    border-left: 5px;
+    border-left-color: orange;
+}
+.basket-status {
+    color: darkgoldenrod;
+}
+mat-card {
+    border-radius: 8px;
+}
+mat-progress-bar {
+    height: 10px !important;
+}

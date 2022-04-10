@@ -1,0 +1,40 @@
+<div *ngFor="let e of Baskets ; let i = index">
+<mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header  class="sectional-heading">
+            <mat-panel-title>
+                {{e.investmentLOB}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+    <mat-card class="mat-card-section-style">
+
+        <mat-card-content class="mat-card-content-section-style">
+        <table>
+            <tr>
+            <th>
+                {{e.investmentLOB}}
+            </th>
+            <th>
+                {{e.basketHeader}}
+            </th>
+        </tr>
+            <tbody *ngFor="let object of e.basketData">
+                <tr>
+                <td>
+                    {{object.itemName}}
+                    
+                </td>
+                <td>
+                    {{object.itemvalue}}
+                </td>
+            </tr>
+            </tbody>
+        </table> 
+        
+              
+        </mat-card-content>
+    </mat-card>
+</mat-expansion-panel>
+</mat-accordion>
+</div>

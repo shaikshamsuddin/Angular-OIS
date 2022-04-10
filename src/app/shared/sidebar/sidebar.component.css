@@ -1,0 +1,22 @@
+.mat-icon {
+    vertical-align: center;
+    margin-right: 1rem;
+}
+.mat-subheader {
+    color: #818cf8;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.mat-list-item {
+    color: #c5c9cf;
+    font-size: 1rem;
+    height: 44px !important;
+}
+.mat-list-item:hover {
+    background: rgb(96,139,189) !important;
+}
+.list-item-active {
+    color: #f2f5f7 !important;
+    background: #5c709e !important;
+}

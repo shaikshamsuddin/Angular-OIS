@@ -1,0 +1,9 @@
+mat-tab-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+mat-tab .label{
+    font-weight: bold;
+}

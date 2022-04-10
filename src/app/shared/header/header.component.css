@@ -1,0 +1,16 @@
+.spacer {
+    flex: 0.8 auto;
+}
+
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    color: #0079c2;
+    font-size: large;
+    font-weight: bold;
+    padding: 1rem;
+}
+.app-name {
+    padding-left: 10px;
+}

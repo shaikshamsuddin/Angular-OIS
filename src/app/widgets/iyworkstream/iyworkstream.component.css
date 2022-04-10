@@ -1,0 +1,6 @@
+mat-progress-bar {
+    height: 10px !important;
+}
+.spacer {
+    flex: 0.8 auto;
+}
