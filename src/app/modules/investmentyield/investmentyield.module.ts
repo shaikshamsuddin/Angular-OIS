@@ -8,7 +8,6 @@ import { IyindexrateComponent } from './iyindexrate/iyindexrate.component';
 import { IybasketComponent } from './iybasket/iybasket.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IyworkstreamComponent } from 'src/app/widgets/iyworkstream/iyworkstream.component';
-import { TableComponent } from 'src/app/basketsTableComponet/basketstable/table.component';
 
 
 @NgModule({
@@ -18,8 +17,8 @@ import { TableComponent } from 'src/app/basketsTableComponet/basketstable/table.
     IycontributionComponent, 
     IyindexrateComponent, 
     IybasketComponent,
-    IyworkstreamComponent,
-    TableComponent
+    IyworkstreamComponent
+    
   ],
   imports: [
     CommonModule,
