@@ -1,56 +1,54 @@
-<div *ngFor="let e of Baskets ; let i = index">
-<mat-accordion class="example-headers-align" multi>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header  class="sectional-heading">
-            <mat-panel-title>
-                {{e.investmentLOB}}
-            </mat-panel-title>
-          </mat-expansion-panel-header>
+<div class="basket-container">
+    <div *ngFor="let e of Baskets ; let i = index" class="basket-block">
+        <mat-accordion class="example-headers-align" multi>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header class="sectional-heading" (click)="expansionPanelIndex(i)"
+                    [style.background]="selectedIndex == i ? '#F0FFFF' : '#ffffff'">
 
-    <mat-card class="mat-card-section-style">
+                    <mat-panel-title>
+                        {{e.investmentLOB}}
+                    </mat-panel-title>
 
-        <mat-card-content class="mat-card-content-section-style">
-        <table>
-            <tr>
-            <th>
-                Line of Business
-            </th>
-            <th>
-                {{e.basketHeader}}
-            </th>
-        </tr>
-        <div *ngFor="let object of e.basketData">
-                <tr>
-                <td>
-                    {{object.itemName}}
-                    
-                </td>
-                <td>
-                    {{object.itemvalue}}
-                </td>
-            </tr>
-            <table mat-table class="mat-elevation-z8 demo-table">
-                <!-- Position Column -->
-                <ng-container >
-                  <th mat-header-cell *matHeaderCellDef> Line of Business </th>
-                  <td mat-cell *matCellDef="let element"> {{object.itemName}} </td>
-                </ng-container>
-              
-                <!-- Name Column -->
-                <ng-container>
-                  <th mat-header-cell *matHeaderCellDef> Net Investable Yield </th>
-                </ng-container>
-              
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-              </table>
-            </div>
-        </table> 
-        
-              
-        </mat-card-content>
-    </mat-card>
-</mat-expansion-panel>
-</mat-accordion>
+                </mat-expansion-panel-header>
+                <div class="mat-table-container">
+                    <mat-card class="mat-card-section-style">
+
+                        <mat-card-content class="mat-card-content-section-style">
+                            <div class="table-container">
+                               
+                           
+                                 <div class="table-header">
+                                    <div class="item-width">
+                                        <div>
+                                            Line of Business
+                                        </div>
+                                    </div>
+                                    <div class="item-width2">
+                                        <div>
+                                            {{e.basketHeader}}
+                                        </div>
+                                    </div>
+                                </div> 
+                             <div *ngFor="let object of indexRatesList" class="table-data">
+                                    <div class="item-width">
+                                        <div>
+                                            {{object.itemName}}
+                                        </div>
+
+                                    </div>
+                                    <div class="item-width2">
+                                        <div>
+                                            {{object.itemvalue}}%
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+
+
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
 </div>

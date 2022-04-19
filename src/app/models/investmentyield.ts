@@ -50,6 +50,7 @@ export class IYWorkStream {
             dataKey: key,
             keyDescription: desc
         }
+        
         let contrib: IYDataContribution = {
             dataItem: dp,
             dataValue: keyval,

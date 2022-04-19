@@ -1,0 +1,43 @@
+.basket-container{
+    padding: 10px;
+}
+.basket-block{
+    margin-bottom: 5px;
+}
+.sectional-heading {
+    height: 50px;
+
+  }
+  /* .mat-table-container{
+      padding-top: 20px;
+  } */
+  .mat-expansion-panel-body {
+    padding: 15px 15px !important;
+}
+  .mat-card-section-style{
+    background-color: white;
+
+  }
+  .mat-expansion-panel{
+    background-color: #fafafa ;
+
+  }
+  
+.table-container{
+    width: 100%;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+}
+
+
+
+.table-data{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+ .item-width{
+}

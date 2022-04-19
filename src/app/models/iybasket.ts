@@ -8,6 +8,9 @@ export interface IYDataContribution {
     contributionDate: Date
 }
 export class Basket {
+    forEach(arg0: (stufs: any) => void) {
+      throw new Error('Method not implemented.');
+    }
     investmentLOB: string | undefined;
     basketHeader: string | undefined;
     basketData: BasketItem[] = [];

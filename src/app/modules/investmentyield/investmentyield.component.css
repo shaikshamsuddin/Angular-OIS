@@ -7,3 +7,17 @@ mat-tab-group {
 mat-tab .label{
     font-weight: bold;
 }
+.date-picker{
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+.mat-tab-label-container{
+    position: relative;
+}
+::ng-deep .mat-tab-header{
+    width: 70% !important;
+}
+::ng-deep .mat-tab-nav-bar, ::ng-deep .mat-tab-header {
+    border-width: 0px !important;
+}

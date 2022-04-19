@@ -46,11 +46,20 @@ export class InvestmentYieldService {
     ws1.loadWorkStream(2, "Tenor", "Jacob", "Thomas", "jacob_thomas@nylim.com", new Date(), "system");
     ws1.loadWorkStreamData(1, 2, "k1", "key1", 3, "Jacob", new Date());
     ws1.loadWorkStreamData(2, 2, "k1", "key2", 10, "", new Date());
-    ws1.loadWorkStreamData(2, 2, "k1", "key3", Number.MAX_SAFE_INTEGER, "", new Date());
+    ws1.loadWorkStreamData(3, 2, "k1", "key3", Number.MAX_SAFE_INTEGER, "", new Date());
     this.workStreams.push(ws1);
     this._totalDataPoints += ws1.TotalDataPoints;
     this._valuedDataPoints += ws1.ValuedDataPoints;
-  }
+  
+  let ws2 = new IYWorkStream();
+  ws2.loadWorkStream(3, "Mackay", "Jacob", "Thomas", "jacob_thomas@nylim.com", new Date(), "system");
+  ws2.loadWorkStreamData(1, 3, "k1", "key1", 3.56, "", new Date());
+  ws2.loadWorkStreamData(2, 3, "k1", "key2", 0, "", new Date());
+  ws2.loadWorkStreamData(2, 3, "k1", "key3", Number.MAX_SAFE_INTEGER, "", new Date());
+  this.workStreams.push(ws2);
+  this._totalDataPoints += ws2.TotalDataPoints;
+  this._valuedDataPoints += ws2.ValuedDataPoints;
+}
 
   private loadMockBasketData() {
     let b1 = new Basket("ANNUITY", "Net Investable Yield");
